@@ -3,16 +3,25 @@ const { execSync } = require("child_process");
 
 const installDependencies = () => {
   const dependencies = [
+    "@hookform/resolvers",
     "@react-navigation/native",
     "@react-navigation/native-stack",
+    "@shopify/restyle",
+    "@tanstack/react-query",
     "axios",
+    "date-fns",
+    "react-hook-form",
+    "react-native-mmkv",
     "react-native-safe-area-context",
     "react-native-screens",
     "react-native-svg",
+    "zod",
+    "zustand",
     "react-native-reanimated",
   ];
 
   const devDependencies = [
+    "@tanstack/eslint-plugin-query",
     "@testing-library/jest-native",
     "@testing-library/react-native",
     "babel-plugin-module-resolver",
@@ -22,6 +31,7 @@ const installDependencies = () => {
     "msw",
     "ts-node",
     "react-native-dotenv",
+    "husky",
   ];
 
   console.log("\n");
