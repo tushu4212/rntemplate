@@ -1,12 +1,12 @@
 {
-  "name": "@gbrlcoelho/react-native-boilerplate",
+  "name": "@tushu4212/rntemplate",
   "version": "2.1.0",
-  "description": "React Native Boilerplate",
+  "description": "React Native Template",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/gbrlcoelho/rn-boilerplate.git"
+    "url": "git+ssh://git@github.com:tushu4212/rntemplate.git"
   },
-  "author": "Gabriel Coelho <coelhogabriel67@gmail.com>",
+  "author": "Tushar <tashu4212@gmail.com>",
   "license": "MIT",
   "keywords": [
     "react",
@@ -21,9 +21,9 @@
     "template.config.js"
   ],
   "bugs": {
-    "url": "https://github.com/gbrlcoelho/rn-boilerplate/issues"
+    "url": "https://github.com/tushu4212/rntemplate/issues"
   },
-  "homepage": "https://github.com/gbrlcoelho/rn-boilerplate#readme",
+  "homepage": "https://github.com/tushu4212/rntemplate",
   "main": "script.js",
   "scripts": {}
 }
