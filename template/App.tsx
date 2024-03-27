@@ -1,21 +1,20 @@
-import React from 'react';
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
 
-import {ThemeProvider} from '@shopify/restyle';
-import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-
-import {theme} from '@theme';
-
-const queryClient = new QueryClient();
-
-export const App = () => {
+const App = () => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <SafeAreaProvider>
-        <ThemeProvider theme={theme}>
-          <></>
-        </ThemeProvider>
-      </SafeAreaProvider>
-    </QueryClientProvider>
-  );
-};
+    <View styles={{styles.container}}>
+      <Text>App</Text>
+    </View>
+  )
+}
+
+export default App
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignitems: 'center',
+  }
+})
