@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { execSync } from "child_process";
+const { execSync } = require("child_process");
 
 const installDependencies = () => {
   const dependencies = [
@@ -36,7 +36,9 @@ const installDependencies = () => {
 
   console.log("\n");
 
-  console.log("@tushu4212/rntemplate initialized with success! 🚀\n");
+  console.log(
+    "@gbrlcoelho/react-native-boilerplate initialized with success! 🚀\n"
+  );
 
   console.log("Installing dependencies... 🛠️\n");
   execSync(`yarn add ${dependencies.join(" ")}`, { stdio: "inherit" });
@@ -58,7 +60,17 @@ new Promise((resolve) => {
 })
   .then(() => {
     console.log(
-      "- 🎉  Congrats! Your project is ready with @tushu4212/rntemplate! 🎉\n"
+      "- 🎉  Congrats! Your project is ready with @gbrlcoelho/react-native-boilerplate! 🎉\n"
+    );
+
+    console.log(
+      "- 📚 If you need to read more about this boilerplate : https://github.com/gbrlcoelho/rn-boilerplate/blob/master/README.md\n"
+    );
+    console.log(
+      "- 🤕 If you have some troubles : https://github.com/gbrlcoelho/rn-boilerplate/issues\n"
+    );
+    console.log(
+      "- ⭐ If you love this boilerplate, give us a star, you will be a ray of sunshine in our lives :) https://github.com/gbrlcoelho/rn-boilerplate\n"
     );
   })
   .catch((error) => {
