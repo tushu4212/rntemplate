@@ -1,11 +1,14 @@
-import React from 'react';
-import {View,Text} from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
 
-
-export const App = () => {
+const App = () => {
   return (
-    <View style={{flex:1,alignItems:'center',justifyContext:'center'}}>
-      <Text>Hello from template</Text>
-   </View>
-  );
-};
+    <View>
+      <Text>App</Text>
+    </View>
+  )
+}
+
+export default App
+
+const styles = StyleSheet.create({})
