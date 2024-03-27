@@ -1,8 +1,29 @@
 {
-  "name": "rn-template",
+  "name": "@tushu4212/rn-template",
   "version": "0.0.1",
   "description": "React Native Template",
-  "repository": "git@github.com:tushu4212/rntemplate.git",
-  "author": "Tushar",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tushu4212/rntemplate.git"
+  },
+  "author": "Tushar <tashu4212@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "native",
+    "boilerplate",
+    "react-native",
+    "starter-kit"
+  ],
+  "files": [
+    "template",
+    "template/.gitignore",
+    "template.config.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/tushu4212/rntemplate/issues"
+  },
+  "homepage": "https://github.com/tushu4212/rntemplate",
+  "main": "script.js",
+  "scripts": {}
 }
