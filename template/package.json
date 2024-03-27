@@ -1,5 +1,5 @@
 {
-  "name": "projectname",
+  "name": "ProjectName",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,10 +7,7 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest --verbose",
-    "coverage": "jest --coverage",
-    "prepare": "npx husky",
-    "commit": "npx git-cz"
+    "test": "jest"
   },
   "dependencies": {
     "react": "18.2.0",
@@ -32,16 +29,6 @@
     "prettier": "2.8.8",
     "react-test-renderer": "18.2.0",
     "typescript": "5.0.4"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "yarn lint --fix"
-    ]
   },
   "engines": {
     "node": ">=18"
