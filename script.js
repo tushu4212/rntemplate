@@ -9,7 +9,11 @@ const installDependencies = () => {
     "react-native-safe-area-context",
     "react-native-screens",
     "react-native-svg",
+    "react-native-svg-transformer",
     "react-native-reanimated",
+    "@react-native-async-storage/async-storage",
+    "@reduxjs/toolkit",
+    "react-redux",
   ];
 
   const devDependencies = [
