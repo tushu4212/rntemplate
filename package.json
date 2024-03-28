@@ -1,10 +1,10 @@
 {
-  "name": "@tushu4212/rntemplate",
-  "version": "2.1.0",
+  "name": "@tushar4212/rntemplate",
+  "version": "1.0.0",
   "description": "React Native Template",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:tushu4212/rntemplate.git"
+    "url": "https://github.com/tushu4212/rntemplate"
   },
   "author": "Tushar <tashu4212@gmail.com>",
   "license": "MIT",
