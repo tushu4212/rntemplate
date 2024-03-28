@@ -13,7 +13,8 @@
     "native",
     "boilerplate",
     "react-native",
-    "starter-kit"
+    "starter-kit",
+    "template"
   ],
   "files": [
     "template",
@@ -23,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/tushu4212/rntemplate/issues"
   },
-  "homepage": "https://github.com/tushu4212/rntemplate",
+  "homepage": "https://github.com/tushu4212/rntemplate#readme",
   "main": "script.js",
   "scripts": {}
 }
