@@ -3,7 +3,7 @@ import React, {createContext, useState} from 'react';
 import {Provider} from 'react-redux';
 import {NavigationContainer} from '@react-navigation/native';
 import StackNavigation from './src/navigation/stackNavigation';
-import {store} from 'src/redux/store/store';
+import { store } from 'src/store/reducers';
 
 export const GlobalContext = createContext<ContextValue | null>(null);
 

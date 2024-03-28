@@ -45,6 +45,9 @@ npx react-native@latest init YourProjectName --template @tushar4212/rntemplate
 │   │   └── index.ts
 │   ├── services
 │   │   └── index.ts
+│   ├── store
+│   │   └── reducers
+│   │   └── slice
 │   ├── theme
 │   │   └── theme.ts
 │   ├── types
