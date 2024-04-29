@@ -2,24 +2,6 @@
 const { execSync } = require("child_process");
 
 const installDependencies = () => {
-  const installYarn = () => {
-    console.log("Yarn is not installed. Installing yarn...");
-    try {
-      execSync("npm install -g yarn", { stdio: "inherit" });
-      console.log("Yarn installed successfully.");
-    } catch (error) {
-      console.error("Error installing yarn:", error);
-      throw error;
-    }
-  };
-  const checkYarnInstalled = () => {
-    try {
-      execSync("yarn --version", { stdio: "ignore" });
-      return true;
-    } catch (error) {
-      return false;
-    }
-  };
   const dependencies = [
     "@react-navigation/native",
     "@react-navigation/native-stack",
@@ -48,10 +30,6 @@ const installDependencies = () => {
   console.log("\n");
 
   console.log("@tushu4212/rntemplate initialized with success! 🚀\n");
-
-  if (!checkYarnInstalled()) {
-    installYarn();
-  }
 
   console.log("Installing dependencies... 🛠️\n");
   execSync(`yarn add ${dependencies.join(" ")}`, { stdio: "inherit" });
