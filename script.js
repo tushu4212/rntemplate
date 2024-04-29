@@ -12,6 +12,14 @@ const installDependencies = () => {
       throw error;
     }
   };
+  const checkYarnInstalled = () => {
+    try {
+      execSync("yarn --version", { stdio: "ignore" });
+      return true;
+    } catch (error) {
+      return false;
+    }
+  };
   const dependencies = [
     "@react-navigation/native",
     "@react-navigation/native-stack",
