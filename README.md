@@ -9,7 +9,7 @@ This is a React Native template designed to kickstart your mobile app developmen
 To initialize a new project using this boilerplate, run the following command:
 
 ```bash
-npx react-native@latest init YourProjectName --template @tushar4212/rntemplate
+npx @react-native-community/cli@latest init YourProjectName --template @tushar4212/rntemplate
 ```
 
 ## Dependencies
