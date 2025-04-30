@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import {NavigationContainer} from '@react-navigation/native';
 import StackNavigation from './src/navigation/RootNavigation';
 import store from './src/redux/store';
-
+import {PaperProvider} from 'react-native-paper';
 
 export const GlobalContext = createContext<ContextValue | null>(null);
 
@@ -14,7 +14,7 @@ const App: React.FC<ContextValue> = () => {
   return (
     // <GlobalContext.Provider value={{context: context, setContext: setContext}}>
       // </GlobalContext.Provider>
-      <PaperProvide  settings={{
+      <PaperProvider  settings={{
         rippleEffectEnabled: false,
       }}>
       <Provider store={store}>
