@@ -10,9 +10,12 @@ const installDependencies = () => {
     "react-native-screens",
     "react-native-svg",
     "react-native-reanimated",
-    "@react-native-async-storage/async-storage",
+    "react-native-mmkv",
     "@reduxjs/toolkit",
     "react-redux",
+    "react-native-size-matters",
+    "react-native-keyboard-aware-scroll-view",
+    "react-native-paper",
   ];
 
   const devDependencies = [
