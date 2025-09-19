@@ -1,5 +1,6 @@
 import {Appearance, Dimensions, Platform, StyleSheet} from 'react-native';
 import {scale} from 'react-native-size-matters';
+import { RFValue } from "react-native-responsive-fontsize";
 
 const {width, height} = Dimensions.get('window');
 const colorScheme = Appearance.getColorScheme();
@@ -467,17 +468,17 @@ export const CommonStyles = StyleSheet.create({
   textLeft: {textAlign: 'left'},
   textRight: {textAlign: 'right'},
 
-  text10: {fontSize: scale(10)},
-  text12: {fontSize: scale(12)},
-  text14: {fontSize: scale(14)},
-  text16: {fontSize: scale(16)},
-  text18: {fontSize: scale(18)},
-  text20: {fontSize: scale(20)},
-  text22: {fontSize: scale(22)},
-  text24: {fontSize: scale(24)},
-  text26: {fontSize: scale(26)},
-  text28: {fontSize: scale(28)},
-  text30: {fontSize: scale(30)},
+  text10: {fontSize: RFValue(10)},
+  text12: {fontSize: RFValue(12)},
+  text14: {fontSize: RFValue(14)},
+  text16: {fontSize: RFValue(16)},
+  text18: {fontSize: RFValue(18)},
+  text20: {fontSize: RFValue(20)},
+  text22: {fontSize: RFValue(22)},
+  text24: {fontSize: RFValue(24)},
+  text26: {fontSize: RFValue(26)},
+  text28: {fontSize: RFValue(28)},
+  text30: {fontSize: RFValue(30)},
 
   textWhite: {
     color: '#fff',

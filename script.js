@@ -14,8 +14,11 @@ const installDependencies = () => {
     "@reduxjs/toolkit",
     "react-redux",
     "react-native-size-matters",
+    "react-native-responsive-fontsize",
     "react-native-keyboard-aware-scroll-view",
     "react-native-paper",
+    "react-native-worklets",
+    "react-native-permissions",
   ];
 
   const devDependencies = [
