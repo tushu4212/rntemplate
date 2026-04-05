@@ -25,7 +25,9 @@ const installPackages = (packages, isDev) => {
     return;
   }
   const saveFlag = isDev ? "--save-dev" : "--save";
-  execSync(`npm install ${packages.join(" ")} ${saveFlag}`, { stdio: "inherit" });
+  execSync(`npm install ${packages.join(" ")} ${saveFlag}`, {
+    stdio: "inherit",
+  });
 };
 
 const installDependencies = () => {
@@ -50,6 +52,7 @@ const installDependencies = () => {
     "react-native-reanimated",
     "react-native-worklets",
     "react-native-gesture-handler",
+    "react-native-nitro-modules",
   ];
 
   const devDependencies = [
