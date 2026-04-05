@@ -9,7 +9,6 @@ const installDependencies = () => {
     "react-native-safe-area-context",
     "react-native-screens",
     "react-native-svg",
-    "react-native-reanimated",
     "react-native-mmkv",
     "@reduxjs/toolkit",
     "react-redux",
@@ -17,8 +16,13 @@ const installDependencies = () => {
     "react-native-responsive-fontsize",
     "react-native-keyboard-aware-scroll-view",
     "react-native-paper",
-    "react-native-worklets",
     "react-native-permissions",
+    "react-native-otp-entry",
+    "react-native-modal-datetime-picker",
+    "@react-native-community/datetimepicker",
+    "react-native-reanimated",
+    "react-native-worklets",
+    "react-native-gesture-handler",
   ];
 
   const devDependencies = [
@@ -57,7 +61,7 @@ new Promise((resolve) => {
 })
   .then(() => {
     console.log(
-      "- 🎉  Congrats! Your project is ready with @tushu4212/rntemplate! 🎉\n"
+      "- 🎉  Congrats! Your project is ready with @tushu4212/rntemplate! 🎉\n",
     );
   })
   .catch((error) => {

@@ -1,28 +1,33 @@
-import {ContextValue} from '@types';
-import React, {createContext, useState} from 'react';
-import {Provider} from 'react-redux';
-import {NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+import { PaperProvider } from 'react-native-paper';
+import { Provider } from 'react-redux';
 import StackNavigation from './src/navigation/RootNavigation';
 import store from './src/redux/store';
-import {PaperProvider} from 'react-native-paper';
+import { CommonStyles } from './src/components/Common/CommonStyles';
+import {
+  initialWindowMetrics,
+  SafeAreaProvider,
+} from 'react-native-safe-area-context';
 
-export const GlobalContext = createContext<ContextValue | null>(null);
-
-const App: React.FC<ContextValue> = () => {
-  const [context, setContext] = useState(0);
-
+const App: React.FC = () => {
   return (
-    // <GlobalContext.Provider value={{context: context, setContext: setContext}}>
-      // </GlobalContext.Provider>
-      <PaperProvider  settings={{
-        rippleEffectEnabled: false,
-      }}>
-      <Provider store={store}>
-      <NavigationContainer>
-        <StackNavigation />
-      </NavigationContainer>
-      </Provider>
+    <SafeAreaProvider
+      CommonStyles={[CommonStyles.flex1]}
+      initialMetrics={initialWindowMetrics}
+    >
+      <PaperProvider
+        settings={{
+          rippleEffectEnabled: false,
+        }}
+      >
+        <Provider store={store}>
+          <NavigationContainer>
+            <StackNavigation />
+          </NavigationContainer>
+        </Provider>
       </PaperProvider>
+    </SafeAreaProvider>
   );
 };
 
