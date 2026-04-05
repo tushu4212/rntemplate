@@ -1,5 +1,32 @@
 #!/usr/bin/env node
 const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+
+// RN runs this before CLI `installDependencies`. Template has package-lock.json only;
+// always using `yarn add` breaks npm-only setups and can leave iOS autolinking broken for `pod install`.
+const installPackages = (packages, isDev) => {
+  const root = process.cwd();
+  const hasYarnLock = fs.existsSync(path.join(root, "yarn.lock"));
+  const hasBunLock =
+    fs.existsSync(path.join(root, "bun.lockb")) ||
+    fs.existsSync(path.join(root, "bun.lock"));
+
+  if (hasBunLock) {
+    const devFlag = isDev ? "--dev" : "";
+    execSync(`bun add ${devFlag} ${packages.join(" ")}`.trim(), {
+      stdio: "inherit",
+    });
+    return;
+  }
+  if (hasYarnLock) {
+    const devFlag = isDev ? " -D" : "";
+    execSync(`yarn add ${packages.join(" ")}${devFlag}`, { stdio: "inherit" });
+    return;
+  }
+  const saveFlag = isDev ? "--save-dev" : "--save";
+  execSync(`npm install ${packages.join(" ")} ${saveFlag}`, { stdio: "inherit" });
+};
 
 const installDependencies = () => {
   const dependencies = [
@@ -42,11 +69,11 @@ const installDependencies = () => {
   console.log("@tushu4212/rntemplate initialized with success! 🚀\n");
 
   console.log("Installing dependencies... 🛠️\n");
-  execSync(`yarn add ${dependencies.join(" ")}`, { stdio: "inherit" });
+  installPackages(dependencies, false);
   console.log("Dependencies installed successfully. 🚀\n");
 
   console.log("Installing dev dependencies... 🛠️\n");
-  execSync(`yarn add ${devDependencies.join(" ")} -D`, { stdio: "inherit" });
+  installPackages(devDependencies, true);
   console.log("Dev dependencies installed successfully.🚀\n");
 };
 
