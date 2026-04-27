@@ -17,6 +17,7 @@
     "template"
   ],
   "files": [
+    "script.js",
     "template",
     "template/.gitignore",
     "template/.bundle/config",
