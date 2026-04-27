@@ -99,8 +99,7 @@
 //     throw new Error();
 //   });
 
-
-#!/usr/bin/env node
+// #!/usr/bin/env node
 const { execSync } = require("child_process");
 
 // const installDependencies = () => {
@@ -200,7 +199,7 @@ new Promise((resolve) => {
 })
   .then(() => {
     console.log(
-      "- 🎉  Congrats! Your project is ready with @tushu4212/rntemplate! 🎉\n"
+      "- 🎉  Congrats! Your project is ready with @tushu4212/rntemplate! 🎉\n",
     );
   })
   .catch((error) => {
