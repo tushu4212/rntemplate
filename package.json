@@ -1,6 +1,6 @@
 {
   "name": "@tushar4212/rntemplate",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "React Native Template",
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
     "template",
     "template/.gitignore",
     "template/.bundle/config",
+    "template/Gemfile.lock",
     "template.config.js"
   ],
   "bugs": {
