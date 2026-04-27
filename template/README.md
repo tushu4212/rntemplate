@@ -36,6 +36,13 @@ yarn android
 
 For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
 
+**Ruby:** The `Gemfile` requires **Ruby 3.1+**. Apple’s system Ruby (2.6, `/usr/bin/ruby`) is not supported. Install a current Ruby (for example `brew install ruby`) and put it **first** on your `PATH` so `ruby -v` and `which bundle` do not point at `/System/Library/...` or `/usr/bin/ruby` only.
+
+```sh
+# Apple Silicon (adjust for Intel: /usr/local/opt/ruby/bin)
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+```
+
 The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
 
 ```sh
